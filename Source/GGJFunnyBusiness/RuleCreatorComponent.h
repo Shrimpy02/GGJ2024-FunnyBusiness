@@ -13,16 +13,17 @@ class GGJFUNNYBUSINESS_API URuleCreatorComponent : public UActorComponent
 public:	
 	URuleCreatorComponent();
 
-	UP
-	TArray{ int } Clothes;
-	TArray
+	UPROPERTY()
+	TArray<FName> ClownHats;
 
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 protected:
 	virtual void BeginPlay() override;
 
-public:	
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+
+private:
+	void GenerateHats();
 		
 };
