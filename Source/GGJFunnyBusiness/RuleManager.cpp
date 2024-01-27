@@ -67,8 +67,21 @@ void ARuleManager::GenerateFace()
 
 void ARuleManager::GenerateJokes()
 {
-	ClownJokes.Push("This is a really logn joke and must therfore be able to be fit in the box, hahahah this is stupidly long");
-	ClownJokes.Push("This is a really logn joke and must therfore be able to be fit in the box, hahahah this is stupidly long2");
+	ClownJokes.Push("What's the hardest part of a vegetable to eat? - The wheelchair");
+	ClownJokes.Push("Why did the bicycle fall over? It was Two Tired");
+	ClownJokes.Push("A horse walked into a bar. Several people got up and left as they spotted the potential danger of the situation");
+	ClownJokes.Push("Two antennas were getting married on a roof. The ceremony wasnt much, but the reception was incredible!");
+	ClownJokes.Push("Did you hear about the construction worker who lost all his tools? His work got bricked");
+	ClownJokes.Push("Hear about the poor lumberer who lost his morning wood?");
+	ClownJokes.Push("Hear about the priest who disliked children? Me neither");
+	ClownJokes.Push("I think I got food poisoning from my clown colleague’s soup… It tasted funny.");
+	ClownJokes.Push("Did you hear the president was just assassinated by laughter? It was apparently an inside joke.");
+	ClownJokes.Push("Did you hear about the artist who ran away and joined the circus? He’s now an adobe acrobat.");
+	ClownJokes.Push("Be careful in the middle eastern circus, it’s a real mimefield.");
+	ClownJokes.Push("Clown scientists have discovered a new element, HaHa — it’s a laughing gas.");
+	ClownJokes.Push("Jack A. S. Sternberg's entire academic career is just a big joke, he really is a 1st Class Clown.");
+	ClownJokes.Push("My patient lost his humour when he fractured his humerus. It was his funny bone.");
+
 }
 
 void ARuleManager::GenerateCurrentLegalElements()
