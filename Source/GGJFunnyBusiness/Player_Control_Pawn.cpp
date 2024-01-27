@@ -55,9 +55,13 @@ bool APlayer_Control_Pawn::PressDenyButton()
 	// check if clown has one of the illegal items
 	if (IsClownIllegal()) {
 		TotalScore++;
+		UE_LOG(LogTemp, Warning, TEXT("%i"), TotalScore);
+		currentClown->Destroy();
 		return true;
 	}
 	else {
+		UE_LOG(LogTemp, Warning, TEXT("%i"), TotalScore);
+		currentClown->Destroy();
 		return false;
 	}
 }
@@ -72,15 +76,18 @@ void APlayer_Control_Pawn::ClownPassedBy()
 {
 	// check if clown has one of the illegal items
 	if (IsClownIllegal()) {
-		TotalScore++;
+		UE_LOG(LogTemp, Warning, TEXT("%i"), TotalScore);
 	}
 	else {
+		TotalScore++;
+		UE_LOG(LogTemp, Warning, TEXT("%i"), TotalScore);
 	}
+	currentClown->Destroy();
 }
 
 bool APlayer_Control_Pawn::IsClownIllegal()
 {
-	// Get rules
+	// Get rules here. If any of the illegal items matches the clown's items, return true.
 	if (currentClown->clownHatInt == 1) {
 		return true;
 	}

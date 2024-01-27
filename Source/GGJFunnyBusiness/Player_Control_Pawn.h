@@ -41,6 +41,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void DeployNewClown(class AClownDebugClass* clownToDeploy);
 
+	// Called by blueprint. Triggers when the clown reaches the end of the conveyor belt, or when the player presses the allow button
+	UFUNCTION(BlueprintCallable)
 	void ClownPassedBy();
 
 	bool IsClownIllegal();
