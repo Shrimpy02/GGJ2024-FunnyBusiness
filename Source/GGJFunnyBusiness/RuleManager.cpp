@@ -5,17 +5,22 @@ ARuleManager::ARuleManager()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
+	GenerateHats();
+	GenerateClothes();
+	GenerateFace();
+	GenerateJokes();
+	GenerateCurrentLegalElements();
 }
 
 void ARuleManager::BeginPlay()
 {
 	Super::BeginPlay();
 
-	GenerateHats();
-	GenerateClothes();
-	GenerateFace();
-	GenerateJokes();
-	GenerateCurrentLegalElements();
+	//GenerateHats();
+	//GenerateClothes();
+	//GenerateFace();
+	//GenerateJokes();
+	//GenerateCurrentLegalElements();
 }
 
 void ARuleManager::Tick(float DeltaTime)

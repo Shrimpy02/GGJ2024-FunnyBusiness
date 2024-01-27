@@ -22,6 +22,21 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FText generateJokeSentance();
 
+	UPROPERTY(EditAnywhere,BlueprintReadOnly)
+	TArray<FName> IllegalElements;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FName> ClownHats;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FName> ClownClothes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FName> ClownFaces;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FName> ClownJokes;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -40,21 +55,10 @@ private:
 
 	// Variables ---------------------------------
 	// Constant Elements:
-	UPROPERTY()
-	TArray<FName> ClownHats;
 
-	UPROPERTY()
-	TArray<FName> ClownClothes;
-
-	UPROPERTY()
-	TArray<FName> ClownFaces;
-
-	UPROPERTY()
-	TArray<FName> ClownJokes;
 
 	// Game-Spesific elements
-	UPROPERTY()
-	TArray<FName> IllegalElements;
+
 
 	UPROPERTY()
 	TArray<FName> LegalElements;
