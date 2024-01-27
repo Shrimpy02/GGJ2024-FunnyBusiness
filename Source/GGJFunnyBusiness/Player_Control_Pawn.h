@@ -45,7 +45,7 @@ public:
 	bool PressDenyButton();
 
 	UFUNCTION(BlueprintCallable)
-	void DeployNewClown(class AClownDebugClass* clownToDeploy);
+	void DeployNewClown(class AClownCharacterClass* clownToDeploy);
 
 	// Called by blueprint. Triggers when the clown reaches the end of the conveyor belt, or when the player presses the allow button
 	UFUNCTION(BlueprintCallable)
@@ -57,5 +57,5 @@ public:
 	void PlayerLose();
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	AClownDebugClass* currentClown;
+	AClownCharacterClass* currentClown;
 };

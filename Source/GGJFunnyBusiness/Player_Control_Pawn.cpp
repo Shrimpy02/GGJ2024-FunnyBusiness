@@ -3,6 +3,7 @@
 
 #include "Player_Control_Pawn.h"
 #include "ClownDebugClass.h"
+#include "ClownCharacterClass.h"
 #include "Math/UnrealMathUtility.h"
 
 // Sets default values
@@ -70,7 +71,7 @@ bool APlayer_Control_Pawn::PressDenyButton()
 	}
 }
 
-void APlayer_Control_Pawn::DeployNewClown(AClownDebugClass* clownToDeploy)
+void APlayer_Control_Pawn::DeployNewClown(AClownCharacterClass* clownToDeploy)
 {
 	currentClown = clownToDeploy;
 	canSlamButton = true;
@@ -95,9 +96,9 @@ void APlayer_Control_Pawn::ClownPassedBy()
 
 bool APlayer_Control_Pawn::IsClownIllegal()
 {
-	// Get rules here. If any of the illegal items matches the clown's items, return true.
-	if (currentClown->clownHatInt == 1) {
+	//// Get rules here. If any of the illegal items matches the clown's items, return true.
+	//if (currentClown->clownHatInt == 1) {
 		return true;
-	}
+	//}
 	return false;
 }
