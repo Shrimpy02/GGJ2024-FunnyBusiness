@@ -39,10 +39,12 @@ public:
 	bool PressDenyButton();
 
 	UFUNCTION(BlueprintCallable)
-	void DeployNewClown(AActor* clownToDeploy);
+	void DeployNewClown(class AClownDebugClass* clownToDeploy);
 
 	void ClownPassedBy();
 
+	bool IsClownIllegal();
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	AActor* currentClown;
+	AClownDebugClass* currentClown;
 };
