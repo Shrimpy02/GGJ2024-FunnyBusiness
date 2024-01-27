@@ -1,11 +1,7 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "ClownCharacterClass.h"
 
-// Sets default values
 AClownCharacterClass::AClownCharacterClass()
 {
-	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	TheRoot = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Rooty"));
@@ -28,22 +24,18 @@ AClownCharacterClass::AClownCharacterClass()
 	HatMesh->SetRelativeLocation(FVector(0, 0, 135));
 	HatMesh->SetRelativeScale3D(FVector(0.3, 0.3, 0.3));
 	HatMesh->SetRelativeRotation(FRotator(90, 0, 0));
-
 }
 
-// Called when the game starts or when spawned
 void AClownCharacterClass::BeginPlay()
 {
 	Super::BeginPlay();
 }
 
-// Called every frame
 void AClownCharacterClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
 
-// Called to bind functionality to input
 void AClownCharacterClass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
