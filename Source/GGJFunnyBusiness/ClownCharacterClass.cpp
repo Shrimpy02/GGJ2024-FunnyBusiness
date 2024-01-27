@@ -36,8 +36,3 @@ void AClownCharacterClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
-
-void AClownCharacterClass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
