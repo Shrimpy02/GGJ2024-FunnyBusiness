@@ -29,11 +29,17 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	int32 TotalScore = 0;
 
+	UPROPERTY(EditAnywhere)
+	int32 maxHealth = 3;
+
+	UPROPERTY(EditAnywhere)
+	int32 currentHealth;
+
 	UPROPERTY(BlueprintReadWrite)
 	AActor* slammingFist;
 
 	UPROPERTY(BlueprintReadOnly)
-	bool canSlamButton = true;
+	bool canSlamButton = false;
 
 	UFUNCTION(BlueprintCallable)
 	bool PressDenyButton();
@@ -46,6 +52,9 @@ public:
 	void ClownPassedBy();
 
 	bool IsClownIllegal();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void PlayerLose();
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	AClownDebugClass* currentClown;

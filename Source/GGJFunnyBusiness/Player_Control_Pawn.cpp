@@ -17,7 +17,7 @@ APlayer_Control_Pawn::APlayer_Control_Pawn()
 void APlayer_Control_Pawn::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	currentHealth = maxHealth;
 }
 
 // Called every frame
@@ -62,6 +62,10 @@ bool APlayer_Control_Pawn::PressDenyButton()
 	else {
 		UE_LOG(LogTemp, Warning, TEXT("%i"), TotalScore);
 		currentClown->Destroy();
+		currentHealth--;
+		if (currentHealth <= 0) {
+			PlayerLose();
+		}
 		return false;
 	}
 }
@@ -77,6 +81,10 @@ void APlayer_Control_Pawn::ClownPassedBy()
 	// check if clown has one of the illegal items
 	if (IsClownIllegal()) {
 		UE_LOG(LogTemp, Warning, TEXT("%i"), TotalScore);
+		currentHealth--;
+		if (currentHealth <= 0) {
+			PlayerLose();
+		}
 	}
 	else {
 		TotalScore++;
