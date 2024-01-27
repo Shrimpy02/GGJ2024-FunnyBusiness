@@ -35,6 +35,7 @@ AClownCharacterClass::AClownCharacterClass()
 void AClownCharacterClass::BeginPlay()
 {
 	Super::BeginPlay();
+	
 }
 
 // Called every frame
