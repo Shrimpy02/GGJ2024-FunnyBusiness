@@ -29,6 +29,7 @@ AClownCharacterClass::AClownCharacterClass()
 void AClownCharacterClass::BeginPlay()
 {
 	Super::BeginPlay();
+	
 }
 
 void AClownCharacterClass::Tick(float DeltaTime)
