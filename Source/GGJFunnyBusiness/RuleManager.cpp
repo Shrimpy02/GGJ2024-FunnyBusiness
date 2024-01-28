@@ -116,7 +116,7 @@ void ARuleManager::GenerateCurrentLegalElements()
 
 int ARuleManager::getRandomCategory()
 {
-	return FMath::RandRange(1, 4);
+	return FMath::RandRange(1, 3);
 }
 
 FString ARuleManager::getRandomStringEnd()
