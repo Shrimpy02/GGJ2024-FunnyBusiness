@@ -46,7 +46,10 @@ public:
 	void SpawnClowns(AClownCharacterClass* clownToDeploy);
 
 	UFUNCTION(BlueprintCallable)
-	bool PressDenyButton();
+	bool PressDenyButton(bool clownIsIllegual);
+
+	UFUNCTION(BlueprintCallable)
+	bool PressAcceptButton(bool clownIsIllegual);
 
 	UFUNCTION(BlueprintCallable)
 	void ClownPassingBy();
