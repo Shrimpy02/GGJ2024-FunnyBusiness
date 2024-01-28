@@ -32,42 +32,34 @@ void ARuleManager::Tick(float DeltaTime)
 void ARuleManager::GenerateHats()
 {
 
-	ClownHats.Push("Top hat");
-	ClownHats.Push("Jester hat");
-	ClownHats.Push("Bowler hat");
-	ClownHats.Push("Cowboy hat");
+	ClownHats.Push("Judge hat");
 	ClownHats.Push("Paper hat");
-	ClownHats.Push("Banana hat");
-	ClownHats.Push("Afro hair");
+	ClownHats.Push("Pink hair");
 	ClownHats.Push("Judge hair");
-	ClownHats.Push("PigTails hair");
-	ClownHats.Push("Police hat");
+	ClownHats.Push("Purple Jester");
 
 }
 
 void ARuleManager::GenerateClothes()
 {
-	ClownClothes.Push("Jester suit");
-	ClownClothes.Push("Superhero suit");
-	ClownClothes.Push("Wife beater");
-	ClownClothes.Push("Police uniform");
-	ClownClothes.Push("Joker Costume");
-	ClownClothes.Push("Raincoat");
+	ClownClothes.Push("Body clown");
+	ClownClothes.Push("GGJ");
+	ClownClothes.Push("Jester");
+	ClownClothes.Push("PinkDress");
 	ClownClothes.Push("Prison Uniform");
-	ClownClothes.Push("Regular sweater");
-	ClownClothes.Push("GGJ t-shirt");
+	ClownClothes.Push("Raincoat");
+	ClownClothes.Push("Tank-top");
 }
 
 void ARuleManager::GenerateFace()
 {
-	ClownFaces.Push("Red nose");
-	ClownFaces.Push("Blue nose");
-	ClownFaces.Push("Child Art");
-	ClownFaces.Push("Nose Pincher");
-	ClownFaces.Push("Big nose");
-	ClownFaces.Push("Sad clown");
-	ClownFaces.Push("Creeper clown");
-	ClownFaces.Push("Sad/happy mask");
+	ClownFaces.Push("FaceChips");
+	ClownFaces.Push("FaceJoker");
+	ClownFaces.Push("PigNose");
+	ClownFaces.Push("Purple nose");
+	ClownFaces.Push("Red Dots");
+	ClownFaces.Push("RedNose");
+	ClownFaces.Push("Spookyface");
 }
 
 void ARuleManager::GenerateJokes()
