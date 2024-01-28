@@ -16,6 +16,21 @@ class GGJFUNNYBUSINESS_API AClownSpawner : public AActor
 public:
 	AClownSpawner();
 
+	UPROPERTY(BlueprintReadOnly)
+	int32 TotalScore = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 maxHealth = 3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 currentHealth;
+
+	UPROPERTY(BlueprintReadWrite)
+	AActor* slammingFist;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool canSlamButton = false;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* Rooty;
 
@@ -25,10 +40,24 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	AActor* Actorclown;
 
-	virtual void Tick(float DeltaTime) override;	
+	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable)
-	void SpawnClowns();
+	void SpawnClowns(AClownCharacterClass* clownToDeploy);
+
+	UFUNCTION(BlueprintCallable)
+	bool PressDenyButton();
+
+	UFUNCTION(BlueprintCallable)
+	void ClownPassingBy();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void PlayerLose();
+
+	bool IsClownIllegal();
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	AClownCharacterClass* currentClown;
 
 protected:
 	virtual void BeginPlay() override;
